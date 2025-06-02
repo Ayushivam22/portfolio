@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { SlSocialInstagram } from "react-icons/sl";
 import { SlSocialGithub } from "react-icons/sl";
@@ -130,16 +130,16 @@ const Hero = () => {
                   <div className="text-2xl font-bold">
                     About Me
                   </div>
-                  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad nemo dicta ab ex ratione eum voluptates laborum excepturi, consequuntur placeat molestias veniam fuga. Culpa.</div>
+                  <div className="text-gray-600 px-10 mb-4">As a dedicated full stack developer, I thrive on transforming complex problems into intuitive digital solutions. With a strong foundation in the MERN stack and a passion for clean, scalable code, I enjoy crafting seamless user experiences and robust backend systems. I continuously challenge myself through coding contests and real-world projects, blending creativity with logic to build impactful web applications.</div>
 
 <div className="flex flex-col items-center w-full">
   {skills.map(({ name }, idx) => {
     // Place marker 1% less than level, but not below 0
     const levelEnd = Math.max(0, Math.min(100, progress[idx] - 1));
     return (
-      <div key={name} className="flex flex-col w-full gap-2 px-16">
+      <div key={name} className="flex flex-col w-full px-16 my-1">
         <div className="font-semibold text-gray-800">{name}</div>
-        <div className="relative flex-1 w-full">
+        <div className="relative flex-1 w-full ">
           <div className="w-full h-2 bg-gray-800 rounded-full">
             <div
               className="absolute top-0 left-0 h-2 bg-orange-500 rounded-full transition-all duration-1000 ease-in-out"
