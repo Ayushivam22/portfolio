@@ -1,9 +1,8 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { SlSocialInstagram } from "react-icons/sl";
 import { SlSocialGithub } from "react-icons/sl";
 import { SlSocialTwitter } from "react-icons/sl";
-
 
 const Hero = () => {
     const socials = [
@@ -29,9 +28,9 @@ const Hero = () => {
         },
     ];
     const skills = [
-      // add express.js, mongodb, mysql, postgresql, python, c++
-      { name: "ReactJS", level: 95 },
-      { name: "MongoDB", level: 91 },
+        // add express.js, mongodb, mysql, postgresql, python, c++
+        { name: "ReactJS", level: 95 },
+        { name: "MongoDB", level: 91 },
         { name: "Express.js", level: 90 },
         { name: "Node.js", level: 92 },
         { name: "TypeScript", level: 90 },
@@ -43,7 +42,7 @@ const Hero = () => {
     useEffect(() => {
         // Animate each bar after mount
         const timeout = setTimeout(() => {
-            setProgress(skills.map(skill => skill.level));
+            setProgress(skills.map((skill) => skill.level));
         }, 300); // delay for effect
         return () => clearTimeout(timeout);
     }, [skills]);
@@ -108,7 +107,7 @@ const Hero = () => {
                 </div>
             </div>
             <div className="hero-lower flex justify-center items-center mt-10">
-                            <div className="hero-lower-left basis-4/10 w-full hidden md:flex flex-col items-center space-y-4">
+                <div className="hero-lower-left basis-4/10 w-full hidden md:flex flex-col items-center space-y-4">
                     <div className="">
                         {/* Circular Border Container */}
                         <div className="  rounded-b-full  overflow-hidden">
@@ -127,40 +126,60 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="hero-lower-right md:basis-6/10 flex flex-col items-center space-y-4">
-                  <div className="text-2xl font-bold">
-                    About Me
-                  </div>
-                  <div className="text-gray-600 px-10 mb-4">As a dedicated full stack developer, I thrive on transforming complex problems into intuitive digital solutions. With a strong foundation in the MERN stack and a passion for clean, scalable code, I enjoy crafting seamless user experiences and robust backend systems. I continuously challenge myself through coding contests and real-world projects, blending creativity with logic to build impactful web applications.</div>
-
-<div className="flex flex-col items-center w-full">
-  {skills.map(({ name }, idx) => {
-    // Place marker 1% less than level, but not below 0
-    const levelEnd = Math.max(0, Math.min(100, progress[idx] - 1));
-    return (
-      <div key={name} className="flex flex-col w-full px-16 my-1">
-        <div className="font-semibold text-gray-800">{name}</div>
-        <div className="relative flex-1 w-full ">
-          <div className="w-full h-2 bg-gray-800 rounded-full">
-            <div
-              className="absolute top-0 left-0 h-2 bg-orange-500 rounded-full transition-all duration-1000 ease-in-out"
-              style={{ width: `${progress[idx]}%` }}
-            />
-            <div
-              className="absolute top-1/2 transform -translate-y-1/2 transition-all duration-1000 ease-in-out"
-              style={{ left: `${levelEnd}%` }}
-            >
-              <div className="w-4 h-4 bg-white border-5 border-orange-500 rounded-full shadow-md" />
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  })}
-</div>
-
+                    <div className="text-2xl font-bold">About Me</div>
+                    <div className="text-gray-600 px-10 mb-4">
+                        I'm a second-year student at IIIT Bhagalpur and a
+                        passionate full stack developer with a knack for solving
+                        complex problems through code. With solid experience in
+                        the MERN stack and a strong foundation in data
+                        structures and algorithms, I enjoy building scalable web
+                        applications that offer smooth user experiences and
+                        reliable backend systems. Beyond technical skills, I
+                        bring the curiosity, discipline, and problem-solving
+                        mindset essential for a great software engineer. Whether
+                        it's through competitive coding, collaborative projects,
+                        or continuous learning, I strive to grow every day and
+                        contribute meaningfully to the tech community.
+                    </div>
+                    <div className="font-bold flex justify-start w-full px-16 pt-5 text-xl">Tech Stack & Proficiencies</div>
+                    <div className="flex flex-col items-center w-full">
+                        {skills.map(({ name }, idx) => {
+                            // Place marker 1% less than level, but not below 0
+                            const levelEnd = Math.max(
+                                0,
+                                Math.min(100, progress[idx] - 1)
+                            );
+                            return (
+                                <div
+                                    key={name}
+                                    className="flex flex-col w-full px-16 my-1"
+                                >
+                                    <div className="font-semibold text-gray-800">
+                                        {name}
+                                    </div>
+                                    <div className="relative flex-1 w-full ">
+                                        <div className="w-full h-2 bg-gray-800 rounded-full">
+                                            <div
+                                                className="absolute top-0 left-0 h-2 bg-orange-500 rounded-full transition-all duration-1000 ease-in-out"
+                                                style={{
+                                                    width: `${progress[idx]}%`,
+                                                }}
+                                            />
+                                            <div
+                                                className="absolute top-1/2 transform -translate-y-1/2 transition-all duration-1000 ease-in-out"
+                                                style={{ left: `${levelEnd}%` }}
+                                            >
+                                                <div className="w-4 h-4 bg-white border-5 border-orange-500 rounded-full shadow-md" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
-            <div></div>
+            <div className="h-100"></div>
         </div>
     );
 };
