@@ -16,12 +16,12 @@ const Header = () => {
 
     return (
         <div
-            className={`header sticky top-0 flex justify-between h-20 items-center  z-50 shadow-orange-500/20 shadow-md transition-colors -mx-24 px-24 duration-300  ${
+            className={`header sticky top-0 flex justify-between  h-16 items-center  z-50 shadow-orange-500/20 shadow-md transition-colors -mx-24 px-24 duration-300  ${
                 isSticky ? "bg-orange-300/60 backdrop-blur" : "bg-transparent"
             }`}
         >
             <div className='logo'>
-                <h1 className='text-4xl'>AKS</h1>
+                <h1 className='text-4xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400 text-transparent bg-clip-text'>AKS</h1>
             </div>
             <div className="flex items-center gap-2 md:gap-6">
                 <div className='hidden nav gap-4 md:flex '>

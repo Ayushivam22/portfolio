@@ -4,3 +4,12 @@ body {
   background-color: #FFEDD5; /* Tailwind's bg-orange-100 */
   font-family: 'Montserrat', 'Quicksand', sans-serif;
 }
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
