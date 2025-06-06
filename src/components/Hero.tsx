@@ -70,7 +70,7 @@ const Hero = () => {
                         sharpening my algorithmic thinking through competitive
                         programming.
                     </div>
-                    <div className="flex">
+                    <div className="flex px-10">
                         <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-5 rounded-md transition w-auto shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50">
                             Hire Me
                         </button>
@@ -106,7 +106,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <div className="hero-lower flex justify-center items-center mt-10">
+            <div className="hero-lower flex justify-center items-center my-10">
                 <div className="hero-lower-left basis-4/10 w-full hidden md:flex flex-col items-center space-y-4">
                     <div className="">
                         {/* Circular Border Container */}
@@ -179,7 +179,6 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <div className="h-100"></div>
         </div>
     );
 };
