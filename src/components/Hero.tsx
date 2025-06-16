@@ -49,7 +49,7 @@ const Hero = () => {
     return (
         <div className="Container">
             <div className="hero-upper flex mt-12 flex-col md:flex-row ">
-                <div className="hero-upper-left flex flex-col ">
+                <div className="hero-upper-left flex flex-col md:basis-7/10">
                     <p className="text-2sm font-medium">Hi, I am</p>
                     <h2 className="text-2xl font-extrabold text-orange-500 mt-2 ">
                         Ayush Kumar Shivam
@@ -63,8 +63,8 @@ const Hero = () => {
                             </div>
                         </div>
                     </h1>
-                    <div className="text-gray-600 px-10 mb-4">
-                        Passionate full-stack dev | 300+ LeetCode | 1600+ CodeChef | Competitive programmer & web app builder.
+                    <div className="text-gray-600 px-10 mb-4 text-pretty">
+                        Full-Stack Dev | 300+ LeetCode | 1600+ CodeChef | CP & DSA
                     </div>
                     <div className="flex px-10">
                         <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-5 rounded-md transition w-auto shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50">
@@ -73,7 +73,7 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className="hero-upper-right  w-full flex flex-col items-center space-y-4">
+                <div className="hero-upper-right  w-full flex flex-col items-center md:items-start space-y-4 md:basis-3/10">
                     <div className="">
                         {/* Circular Border Container */}
                         <div className="  rounded-b-full  overflow-hidden">
@@ -123,7 +123,7 @@ const Hero = () => {
                 </div>
                 <div className="hero-lower-right md:basis-6/10 flex flex-col items-center space-y-4">
                     <div className="text-2xl font-bold">About Me</div>
-                    <div className="text-gray-600 px-10 mb-4">
+                    <div className="text-gray-600 px-10 mb-4 text-justify">
                         I'm a second-year student at IIIT Bhagalpur and a
                         passionate full stack developer with a knack for solving
                         complex problems through code. With solid experience in
