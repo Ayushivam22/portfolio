@@ -16,7 +16,7 @@ const Header = () => {
 
     return (
         <div
-            className={`header sticky top-0 flex justify-between  h-16 items-center  z-50 shadow-orange-500/20 shadow-md transition-colors -mx-24 px-24 duration-300  ${
+            className={`header sticky top-0 flex justify-between  h-16 items-center  z-50 shadow-orange-500/20 shadow-md transition-colors px-4 md:px-24 duration-300  ${
                 isSticky ? "bg-orange-300/60 backdrop-blur" : "bg-transparent"
             }`}
         >
