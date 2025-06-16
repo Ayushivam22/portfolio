@@ -64,11 +64,7 @@ const Hero = () => {
                         </div>
                     </h1>
                     <div className="text-gray-600 px-10 mb-4">
-                        Passionate full stack developer and problem solver.
-                        Solved 280+ DSA problems on LeetCode, rated 1500+ on
-                        CodeChef. I love building scalable web applications and
-                        sharpening my algorithmic thinking through competitive
-                        programming.
+                        Passionate full-stack dev | 300+ LeetCode | 1600+ CodeChef | Competitive programmer & web app builder.
                     </div>
                     <div className="flex px-10">
                         <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-5 rounded-md transition w-auto shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50">
