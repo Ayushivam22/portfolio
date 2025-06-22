@@ -47,18 +47,17 @@ const Hero = () => {
         return () => clearTimeout(timeout);
     }, [skills]);
     return (
-        <div className="Container">
+        <div className="Container flex flex-col">
             <div className="hero-upper flex mt-12 flex-col md:flex-row ">
                 <div className="hero-upper-left flex flex-col md:basis-7/10">
                     <p className="text-2sm font-medium">Hi, I am</p>
-                    <h2 className="text-2xl font-extrabold text-orange-500 mt-2 ">
+                    <h2 className="text-4xl font-extrabold text-orange-500 mt-2 ">
                         Ayush Kumar Shivam
                     </h2>
-                    <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+                    <h1 className="text-6xl md:text-5xl font-extrabold leading-tight">
                         Aspiring
                         <div className="flex">
-                            <div className="flex basis-2/10"> </div>
-                            <div className="flex  basis-8/10 bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400 text-transparent bg-clip-text text-6xl pb-4">
+                            <div className="flex  bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400 text-transparent bg-clip-text text-7xl pb-4">
                                 <b>Software Engineer</b>
                             </div>
                         </div>
