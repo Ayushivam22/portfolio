@@ -30,7 +30,7 @@ const Projects = () => {
             <div className="py-4 text-4xl font-bold">Projects</div>
 
             <div className="project-container flex flex-col lg:flex-row w-full rounded-2xl bg-orange-200 p-2 md:p-8 gap-2 items-stretch border-orange-700 border-1">
-                <div className="project-image relative lg:w-[70%]  flex justify-center items-center rounded-2xl border-1 border-orange-600 bg-orange-100">
+                <div className="project-image relative lg:w-[70%]  flex justify-center items-center rounded-2xl  bg-orange-100">
                     {/* Arrows */}
                     <div className="absolute left-0 z-10 flex items-center h-full  text-5xl lg:text-9xl px-2 ">
                         <IoIosArrowBack
