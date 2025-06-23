@@ -49,6 +49,7 @@ const Certificates = () => {
                             className="flex-shrink-0 flex justify-center w-full aspect-[16/9]  snap-start"
                         >
                             <img
+                            loading="lazy"
                                 src={cert.image}
                                 alt={cert.label}
                                 className={`w-auto h-full object-contain select-none`}

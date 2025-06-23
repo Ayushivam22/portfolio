@@ -1,53 +1,18 @@
 import { useEffect, useState } from "react";
-import { SlSocialLinkedin } from "react-icons/sl";
-import { SlSocialInstagram } from "react-icons/sl";
-import { SlSocialGithub } from "react-icons/sl";
-import { SlSocialTwitter } from "react-icons/sl";
+import { socials } from "../data/socials";
+import { skills } from "../data/skills";
 
 const Hero = () => {
-    const socials = [
-        {
-            href: "https://github.com/Ayushivam22",
-            label: "GitHub",
-            Icon: SlSocialGithub,
-        },
-        {
-            href: "https://www.linkedin.com/in/ayush-kumar-shivam-89a669247/",
-            label: "LinkedIn",
-            Icon: SlSocialLinkedin,
-        },
-        {
-            href: "https://twitter.com/Ayushivam22",
-            label: "Twitter",
-            Icon: SlSocialTwitter,
-        },
-        {
-            href: "https://www.instagram.com/ayush.shivam.7/",
-            label: "Instagram",
-            Icon: SlSocialInstagram,
-        },
-    ];
-    const skills = [
-        // add express.js, mongodb, mysql, postgresql, python, c++
-        { name: "ReactJS", level: 95 },
-        { name: "MongoDB", level: 91 },
-        { name: "Express.js", level: 90 },
-        { name: "Node.js", level: 92 },
-        { name: "TypeScript", level: 90 },
-        { name: "Tailwind", level: 95 },
-    ];
-    // Animated progress state for each skill
     const [progress, setProgress] = useState(skills.map(() => 0));
 
     useEffect(() => {
-        // Animate each bar after mount
         const timeout = setTimeout(() => {
             setProgress(skills.map((skill) => skill.level));
-        }, 300); // delay for effect
+        }, 300); 
         return () => clearTimeout(timeout);
     }, [skills]);
     return (
-        <div className="Container flex flex-col">
+        <div id="home" className="Container flex flex-col scroll-mt-16">
             <div className="hero-upper flex mt-12 flex-col md:flex-row ">
                 <div className="hero-upper-left flex flex-col md:basis-7/10">
                     <p className="text-2sm font-medium">Hi, I am</p>
@@ -63,12 +28,18 @@ const Hero = () => {
                         </div>
                     </h1>
                     <div className="text-gray-600 px-10 mb-4 text-pretty">
-                        Full-Stack Dev | 300+ LeetCode | 1600+ CodeChef | CP & DSA
+                        Full-Stack Dev | 300+ LeetCode | 1600+ CodeChef | CP &
+                        DSA
                     </div>
                     <div className="flex px-10">
-                        <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-5 rounded-md transition w-auto shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50">
-                            Hire Me
-                        </button>
+                        <a
+                            href="https://www.linkedin.com/in/ayushivam22/"
+                            target="_blank"
+                        >
+                            <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-5 rounded-md transition w-auto shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50">
+                                Hire Me
+                            </button>
+                        </a>
                     </div>
                 </div>
 
@@ -81,7 +52,8 @@ const Hero = () => {
                                 <div className=" bg-white rounded-full w-full h-full flex items-center justify-center scale-x-[-1]  ">
                                     {/* Lifted PNG Image */}
                                     <img
-                                        src="/src/assets/aks.png"
+                                    rel="preload"
+                                        src="https://res.cloudinary.com/den5u58in/image/upload/v1750685205/aks_n9qo7p.png"
                                         alt="Profile"
                                         className="-translate-y-14 object-cover scale-150 hover:scale-160 transition-transform hover:-translate-y-16 duration-300 ease-in-out "
                                     />
@@ -111,7 +83,8 @@ const Hero = () => {
                                 <div className=" bg-white rounded-full w-full h-full flex items-center justify-center">
                                     {/* Lifted PNG Image */}
                                     <img
-                                        src="/src/assets/aks2.png"
+                                    rel="preload"
+                                        src="https://res.cloudinary.com/den5u58in/image/upload/v1750685205/aks2_qjkkqe.png"
                                         alt="Profile"
                                         className="-translate-y-0 object-cover scale-150 hover:scale-160 transition-transform hover:-translate-y-1 duration-300 ease-in-out "
                                     />
@@ -120,7 +93,10 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
-                <div className="hero-lower-right md:basis-6/10 flex flex-col items-center space-y-4">
+                <div
+                    id="about"
+                    className="hero-lower-right md:basis-6/10 flex flex-col items-center space-y-4 scroll-mt-16"
+                >
                     <div className="text-2xl font-bold">About Me</div>
                     <div className="text-gray-600 px-10 mb-4 text-justify">
                         I'm a second-year student at IIIT Bhagalpur and a
@@ -136,7 +112,9 @@ const Hero = () => {
                         or continuous learning, I strive to grow every day and
                         contribute meaningfully to the tech community.
                     </div>
-                    <div className="font-bold flex justify-start w-full px-16 pt-5 text-xl">Tech Stack & Proficiencies</div>
+                    <div className="font-bold flex justify-start w-full px-16 pt-5 text-xl">
+                        Tech Stack & Proficiencies
+                    </div>
                     <div className="flex flex-col items-center w-full">
                         {skills.map(({ name }, idx) => {
                             // Place marker 1% less than level, but not below 0

@@ -36,7 +36,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="flex flex-col gap-4 w-full mt-24 h-lvh">
+        <div id="contact" className="flex flex-col gap-4 w-full mt-24 h-lvh scroll-mt-16">
             <div className="flex  py-4 text-3xl md:text-4xl font-bold justify-center">
                 Let's Build Together
             </div>
