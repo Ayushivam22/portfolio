@@ -76,7 +76,7 @@ const Contact = () => {
                     ></textarea>
                     <button
                         type="submit"
-                        className="flex shrink grow justify-center items-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-2 text-xs rounded-md transition shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 min-w-0 w-1/2 mt-4"
+                        className="flex shrink grow justify-center items-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-2 text-xs rounded-md transition shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 min-w-0 w-1/2 mt-4 hover:cursor-pointer"
                     >
                         {status === "idle"
                             ? "Contact Me"

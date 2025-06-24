@@ -90,14 +90,14 @@ const Projects = () => {
                     </div>
                     <div className="flex mt-auto items-end gap-2 justify-around min-w-0">
                         <button
-                            className="flex shrink grow justify-center items-center gap-1 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-2 text-xs rounded-md transition shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 min-w-0 "
+                            className="flex shrink grow justify-center items-center gap-1 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-2 text-xs rounded-md transition shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 min-w-0 hover:cursor-pointer"
                             onClick={() => handleClick("github")}
                         >
                             <IoLogoGithub className="text-2xl" />
                             <div className="text-sm truncate">Code</div>
                         </button>
                         <button
-                            className="flex shrink grow justify-center items-center gap-1 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-2 text-xs rounded-md transition shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 min-w-0"
+                            className="flex shrink grow justify-center items-center gap-1 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-2 text-xs rounded-md transition shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 min-w-0 hover:cursor-pointer"
                             onClick={() => handleClick("video")}
                         >
                             <CiVideoOn className="text-2xl" />

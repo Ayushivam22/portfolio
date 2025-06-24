@@ -40,7 +40,7 @@ const Header = () => {
             <button
               key={element}
               onClick={() => scrollToSection(element)}
-              className="text-sm font-medium hover:underline transition"
+              className="text-sm font-medium hover:cursor-pointer hover:underline transition"
             >
               {element}
             </button>
@@ -50,7 +50,7 @@ const Header = () => {
         {/* Download Button */}
         <div className="downloadcv-btn">
           <a href="https://www.canva.com/design/DAGlo4LnZRg/aZK-qUgTcCE3agvS8pva0A/view?utm_content=DAGlo4LnZRg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf09073a485" target="_blank">
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-2 text-xs rounded-md transition w-auto shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50">
+          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-2 text-xs rounded-md transition w-auto shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 hover:cursor-pointer">
             Download CV
           </button>
           </a>

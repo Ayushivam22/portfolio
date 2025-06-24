@@ -36,7 +36,7 @@ const Hero = () => {
                             href="https://www.linkedin.com/in/ayushivam22/"
                             target="_blank"
                         >
-                            <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-5 rounded-md transition w-auto shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50">
+                            <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-5 rounded-md transition w-auto shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-50 hover:cursor-pointer">
                                 Hire Me
                             </button>
                         </a>
