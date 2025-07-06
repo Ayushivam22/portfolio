@@ -26,7 +26,7 @@ export const projects = [
     {
         title: "E-sports Tournament Registration Page",
         label: "E-sports Tournament Registration Page",
-        image: "https://res.cloudinary.com/den5u58in/image/upload/v1750685206/tournament_kfedou.png",
+        image: "https://res.cloudinary.com/den5u58in/image/upload/w_600,c_limit,f_auto,q_auto/v1750685206/tournament_kfedou.png",
         description:
             "Designed to handle seamless participant registration with robust security and payment features. The platform integrates Razorpay for secure payment processing and uses Nodemailer to deliver OTP-based email verification and confirmation emails upon successful registration. It features responsive UI components, real-time form validation, and secure backend APIs to ensure a smooth user experience for players signing up for tournaments.",
         techStack: ["React", "Express", "MongoDB", "Node.js", "Razorpay", "Nodemailer"],
