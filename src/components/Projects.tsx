@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
     IoIosArrowBack,
     IoIosArrowForward,
@@ -9,9 +9,12 @@ import { GoLinkExternal } from "react-icons/go";
 import { projects } from "../data/project";
 
 const Projects = () => {
+    const imgRef = useRef<HTMLImageElement | null>(null);
+    const [loading, setLoading] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const scroll = (direction: "left" | "right") => {
+        setLoading(true);
         if (direction === "left") {
             setCurrentIndex((prev) =>
                 prev === 0 ? projects.length - 1 : prev - 1
@@ -25,12 +28,16 @@ const Projects = () => {
 
     const handleClick = (value: "github" | "video" | "liveLink") => {
         const link = projects[currentIndex][value];
-        if(link)
-        {
+        if (link) {
             window.open(link, "_blank");
         }
     };
 
+    const handleImgLoad = () => {
+        if (imgRef.current && imgRef.current.complete) {
+            setLoading(false);
+        }
+    };
     return (
         <div
             className="flex flex-col items-center mt-12 w-full scroll-mt-16"
@@ -39,7 +46,7 @@ const Projects = () => {
             <div className="py-4 text-4xl font-bold">Projects</div>
 
             <div className="project-container flex flex-col lg:flex-row w-full rounded-2xl bg-orange-200 p-2 md:p-8 gap-2 items-stretch border-orange-700 border-1">
-                <div className="project-image relative lg:w-[70%]  flex justify-center items-center rounded-2xl  bg-orange-100">
+                <div className="project-image select-none relative lg:w-[70%]  flex justify-center items-center rounded-2xl  bg-orange-100">
                     {/* Arrows */}
                     <div className="absolute left-0 z-10 flex items-center h-full  text-5xl lg:text-9xl px-2 ">
                         <IoIosArrowBack
@@ -56,12 +63,19 @@ const Projects = () => {
 
                     {/* Image Slide */}
                     <div className="flex justify-center items-center w-full h-full  aspect-16/9">
+                        {loading && (
+                            <div className="absolute w-full h-full rounded-2xl p-1 flex items-center justify-center bg-orange-100/40">
+                                Loading...
+                            </div>
+                        )}
                         <img
+                            key={currentIndex} 
+                            ref={imgRef}
                             loading="lazy"
+                            onLoad={handleImgLoad}
                             src={projects[currentIndex].image}
                             alt={projects[currentIndex].label}
-                            className="w-auto h-full rounded-xl object-contain
-                             select-none  p-1"
+                            className="w-auto h-full rounded-xl object-contain select-none p-1"
                         />
                     </div>
                 </div>
