@@ -64,8 +64,8 @@ const Projects = () => {
                     {/* Image Slide */}
                     <div className="flex justify-center items-center w-full h-full  aspect-16/9">
                         {loading && (
-                            <div className="absolute w-full h-full rounded-2xl p-1 flex items-center justify-center bg-orange-100/40">
-                                Loading...
+                            <div className="absolute w-full h-full rounded-2xl p-1 flex items-center justify-center bg-orange-100/30">
+                                <div className="w-10 h-10 border-4 border-orange-400 border-t-transparent rounded-full animate-spin"></div>
                             </div>
                         )}
                         <img
