@@ -28,9 +28,9 @@ const Header = () => {
       }`}
     >
       <div className="logo">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400 text-transparent bg-clip-text">
+        <button className="text-4xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400 text-transparent bg-clip-text hover:cursor-pointer" onClick={()=>scrollToSection('Home')}>
           AKS
-        </h1>
+        </button>
       </div>
 
       <div className="flex items-center gap-2 md:gap-6">
