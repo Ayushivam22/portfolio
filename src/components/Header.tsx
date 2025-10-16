@@ -27,7 +27,7 @@ const Header = () => {
         isSticky ? "bg-orange-300/60 backdrop-blur" : "bg-transparent"
       }`}
     >
-      <div className="logo">
+      <div className="logo hover:cursor-pointer" onClick={() => scrollToSection('Home')}>
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400 text-transparent bg-clip-text">
           AKS
         </h1>

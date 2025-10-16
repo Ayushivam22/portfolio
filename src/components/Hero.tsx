@@ -10,7 +10,7 @@ const Hero = () => {
             setProgress(skills.map((skill) => skill.level));
         }, 300); 
         return () => clearTimeout(timeout);
-    }, [skills]);
+    }, []);
     return (
         <div id="home" className="Container flex flex-col scroll-mt-16">
             <div className="hero-upper flex mt-12 flex-col md:flex-row ">
@@ -28,7 +28,7 @@ const Hero = () => {
                         </div>
                     </h1>
                     <div className="text-gray-600 px-10 mb-4 text-pretty">
-                        Full-Stack Dev | 300+ LeetCode | 1600+ CodeChef | CP &
+                        Full-Stack Dev | 500+ LeetCode Questions | 1600+ Leetcode Rating | CP &
                         DSA
                     </div>
                     <div className="flex px-10">
@@ -99,7 +99,7 @@ const Hero = () => {
                 >
                     <div className="text-2xl font-bold">About Me</div>
                     <div className="text-gray-600 px-10 mb-4 text-justify">
-                        I'm a second-year student at IIIT Bhagalpur and a
+                        I'm a third-year student at IIIT Bhagalpur and a
                         passionate full stack developer with a knack for solving
                         complex problems through code. With solid experience in
                         the MERN stack and a strong foundation in data
