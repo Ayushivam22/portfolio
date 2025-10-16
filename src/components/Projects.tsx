@@ -7,11 +7,14 @@ import {
 import { CiVideoOn } from "react-icons/ci";
 import { GoLinkExternal } from "react-icons/go";
 import { projects } from "../data/project";
+import Loader from "./Loader";
 
 const Projects = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [loading, setLoading] = useState(true);
 
     const scroll = (direction: "left" | "right") => {
+        setLoading(true);
         if (direction === "left") {
             setCurrentIndex((prev) =>
                 prev === 0 ? projects.length - 1 : prev - 1
@@ -25,8 +28,7 @@ const Projects = () => {
 
     const handleClick = (value: "github" | "video" | "liveLink") => {
         const link = projects[currentIndex][value];
-        if(link)
-        {
+        if (link) {
             window.open(link, "_blank");
         }
     };
@@ -55,9 +57,20 @@ const Projects = () => {
                     </div>
 
                     {/* Image Slide */}
-                    <div className="flex justify-center items-center w-full h-full  aspect-16/9">
+                    <div className="relative flex justify-center items-center w-full h-full  aspect-16/9">
+                        {loading && (
+                            <div className="absolute inset-0 flex justify-center items-center z-20">
+                                <Loader />
+                            </div>
+                        )}
                         <img
                             loading="lazy"
+                            onLoad={() =>
+                                setTimeout(() => {
+                                    setLoading(false);
+                                }, 500)
+                            }
+                            style={{ opacity: loading ? 0 : 1 }}
                             src={projects[currentIndex].image}
                             alt={projects[currentIndex].label}
                             className="w-auto h-full rounded-xl object-contain
